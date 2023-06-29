@@ -27,7 +27,7 @@ public class HelloController {
 
 
     public void initialize(){
-        System.out.println("hey");
+
         firstName.textProperty().addListener(((observableValue, oldValue, newValue) -> {
           errorLine.setText(newValue);
         }));
