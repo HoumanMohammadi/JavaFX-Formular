@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.demojavafx.EmailValidator.isValidEmail;
+
 public class StudentController {
 
 
@@ -58,14 +60,16 @@ public class StudentController {
 
 
     @FXML
-    public Student createStudent(ActionEvent event){
-        Student newStudent;
-        newStudent = new Student(
-                firstName.getText(),
-                lastName.getText(),
-                email.getText(),
-                courseOfStudies.getText(),
-                universityName.getText());
+    public Student createStudent(ActionEvent event) {
+        Student newStudent = null;
+            newStudent = new Student(
+                    firstName.getText(),
+                    lastName.getText(),
+                    email.getText(),
+                    courseOfStudies.getText(),
+                    universityName.getText());
+
+
         System.out.println(newStudent);
         return newStudent;
     }
@@ -73,7 +77,7 @@ public class StudentController {
 
    @FXML
     public void addButton(ActionEvent event) {
-       if (!firstName.getText().isEmpty() && !lastName.getText().isEmpty() && !email.getText().isEmpty() && !courseOfStudies.getText().isEmpty() && !universityName.getText().isEmpty() && acceptBox.isSelected()) {
+       if (!firstName.getText().isEmpty() && !lastName.getText().isEmpty() && isValidEmail(email.getText()) && !courseOfStudies.getText().isEmpty() && !universityName.getText().isEmpty() && acceptBox.isSelected()) {
            Student newStudent = createStudent(event);
            errorLine.setText("you have been added successfully to our Data bank !");
            errorLine.setFill(Color.GREEN);
@@ -83,7 +87,10 @@ public class StudentController {
                throw new RuntimeException(e);
            }
 
-       } else {
+       } else if (!isValidEmail(email.getText())){
+           errorLine.setText("Email not Valid !");
+           errorLine.setFill(Color.RED);
+       }else {
            errorLine.setText("please fill all the fields !");
            errorLine.setFill(Color.RED);
        }
@@ -105,6 +112,5 @@ public class StudentController {
         MenuItem selectedOption = (MenuItem) event.getSource();
         String selectedText = selectedOption.getText();
         universityName.setText(selectedText); // Update the button text
-        System.out.println("Selected option: " + selectedText);
     }
 }
