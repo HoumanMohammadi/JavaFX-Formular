@@ -3,6 +3,7 @@ package com.example.demojavafx;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
@@ -24,6 +25,15 @@ public class HelloController {
     @FXML
     private Text errorLine;
 
+
+    public void initialize(){
+        System.out.println("hey");
+        firstName.textProperty().addListener(((observableValue, oldValue, newValue) -> {
+          errorLine.setText(newValue);
+        }));
+    }
+
+
     @FXML
     public Student createStudent(ActionEvent event){
         Student newStudent;
@@ -42,6 +52,8 @@ public class HelloController {
     public void addButton(ActionEvent event) {
        if (!firstName.getText().isEmpty() && !lastName.getText().isEmpty() && !email.getText().isEmpty() && !courseOfStudies.getText().isEmpty() && !universityName.getText().isEmpty() && acceptBox.isSelected()) {
            Student newStudent = createStudent(event);
+           errorLine.setText("you have been added successfully to our Data bank !");
+           errorLine.setFill(Color.GREEN);
 
        } else {
            errorLine.setText("please fill all the fields !");

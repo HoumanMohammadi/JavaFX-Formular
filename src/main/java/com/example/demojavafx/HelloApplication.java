@@ -3,6 +3,7 @@ package com.example.demojavafx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.paint.Color;
@@ -15,24 +16,27 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        // Das ist neu -> Wir laden die FXML-Datei.
+    public void start(Stage stage)   {
+        try {
+
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(
                 "/com/example/demojavafx/studentFormula.fxml"));
+          Scene scene = new Scene(fxmlLoader.load());
 
-        // Das ist neu -> Wir erstellen eine Scene mit dem root-Node aus der FXML-Datei.
-        // Wir bauen die GUI im SceneBuilder und importieren die Szene hier.
-        // Scene hat die gleiche Breite und Höhe wie der Top-Container FXML-Datei.
-        Scene scene = new Scene(fxmlLoader.load(), 350, 450);
+            //String css = this.getClass().getResource("/com/example/demojavafx/application.css").toExternalForm();
+            //scene.getStylesheets().add(css);
 
-        // Das ist alles gleich!
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+            stage.setScene(scene);
+            stage.show();
+        }catch(Exception e) {
+        e.printStackTrace();
+        }
     }
+
 
     public static void main(String[] args) {
         launch();
