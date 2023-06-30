@@ -86,7 +86,7 @@ public class StudentController {
     }*/
 
     @FXML
-    private ListView<Student> listStudent;
+    private ListView<String> listStudent;
 
 //    private ObservableList<Student> items;
     public void initialize() {
@@ -126,8 +126,8 @@ public class StudentController {
            Student newStudent = createStudent(event);
            errorLine.setText("you have been added successfully to our Data bank !");
            errorLine.setFill(Color.GREEN);
-           listStudent.getItems().add(newStudent);
-           System.out.println(listStudent);
+           listStudent.getItems().add(newStudent.firstName()+" "+newStudent.lastName());
+           //System.out.println(listStudent);
 /*           try {
                switchToScene3(event);
            } catch (IOException e) {
@@ -171,7 +171,7 @@ public class StudentController {
     }
     @FXML
     public void deleteStudent(ActionEvent event) {
-        Student selectedStudent = listStudent.getSelectionModel().getSelectedItem();
+        String selectedStudent = listStudent.getSelectionModel().getSelectedItem();
         if (selectedStudent != null) {
             listStudent.getItems().remove(selectedStudent);
         }

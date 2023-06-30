@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccdcc717-c5d4-40fb-a58c-53368ef30395" name="Changes" comment="3 scene added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentApplication.java" afterDir="false" />
+    <list default="true" id="ccdcc717-c5d4-40fb-a58c-53368ef30395" name="Changes" comment="delete method implemented">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687942238621</updated>
-      <workItem from="1687942239700" duration="62265000" />
+      <workItem from="1687942239700" duration="62762000" />
     </task>
     <task id="LOCAL-00001" summary="Listener added for firstname">
       <created>1688032057731</created>
@@ -107,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688119492944</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="delete method implemented">
+      <created>1688131998451</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688131998451</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +121,7 @@
     <MESSAGE value="second stage implemented" />
     <MESSAGE value="email validator implemented" />
     <MESSAGE value="3 scene added" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 scene added" />
+    <MESSAGE value="delete method implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete method implemented" />
   </component>
 </project>
