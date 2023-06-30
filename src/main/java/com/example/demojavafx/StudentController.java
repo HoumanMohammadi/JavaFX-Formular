@@ -1,5 +1,6 @@
 package com.example.demojavafx;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +13,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import static com.example.demojavafx.EmailValidator.isValidEmail;
 
 public class StudentController {
+
 
     @FXML
     public Button resetButton;
@@ -23,6 +26,8 @@ public class StudentController {
     public Button addButton;
     @FXML
     public Button backButton;
+    @FXML
+    public Button deleteButton;
     @FXML
     private CheckBox acceptBox;
     @FXML
@@ -80,6 +85,23 @@ public class StudentController {
         }));
     }*/
 
+    @FXML
+    private ListView<Student> listStudent;
+
+//    private ObservableList<Student> items;
+    public void initialize() {
+
+
+        // Set the ObservableList as the data source for the ListView
+//        listStudent.setItems(items);
+
+        // Add a listener to the ListView to detect the selected item
+//        listStudent.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Perform any desired action when the selection changes
+//        });
+
+    }
+
 
     @FXML
     public Student createStudent(ActionEvent event) {
@@ -93,6 +115,7 @@ public class StudentController {
 
 
         System.out.println(newStudent);
+
         return newStudent;
     }
 
@@ -103,11 +126,13 @@ public class StudentController {
            Student newStudent = createStudent(event);
            errorLine.setText("you have been added successfully to our Data bank !");
            errorLine.setFill(Color.GREEN);
-           try {
+           listStudent.getItems().add(newStudent);
+           System.out.println(listStudent);
+/*           try {
                switchToScene3(event);
            } catch (IOException e) {
                throw new RuntimeException(e);
-           }
+           }*/
 
        } else if (!isValidEmail(email.getText())){
            errorLine.setText("Email not Valid !");
@@ -142,6 +167,13 @@ public class StudentController {
             switchToScene1(event);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+    @FXML
+    public void deleteStudent(ActionEvent event) {
+        Student selectedStudent = listStudent.getSelectionModel().getSelectedItem();
+        if (selectedStudent != null) {
+            listStudent.getItems().remove(selectedStudent);
         }
     }
 }

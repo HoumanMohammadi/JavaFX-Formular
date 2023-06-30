@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccdcc717-c5d4-40fb-a58c-53368ef30395" name="Changes" comment="email validator implemented">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/welcomePage.fxml" afterDir="false" />
+    <list default="true" id="ccdcc717-c5d4-40fb-a58c-53368ef30395" name="Changes" comment="3 scene added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/ConfirmPopUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/ConfirmPopUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/confirmPopUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/confirmPopUp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +22,8 @@
       <list>
         <option value="Record" />
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -72,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687942238621</updated>
-      <workItem from="1687942239700" duration="53971000" />
+      <workItem from="1687942239700" duration="62265000" />
     </task>
     <task id="LOCAL-00001" summary="Listener added for firstname">
       <created>1688032057731</created>
@@ -102,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688070122766</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="3 scene added">
+      <created>1688119492944</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688119492944</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +118,7 @@
     <MESSAGE value="Listener updated for firstname" />
     <MESSAGE value="second stage implemented" />
     <MESSAGE value="email validator implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="email validator implemented" />
+    <MESSAGE value="3 scene added" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 scene added" />
   </component>
 </project>
