@@ -5,19 +5,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="PopUpAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.ConfirmPopUpController">
+<AnchorPane fx:id="PopUpAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.ConfirmPopUpController">
    <children>
-      <Text fill="#041108" layoutX="40.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student have been Successfully added to our data base. ">
+      <Text fill="#041108" layoutX="40.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Following Student have been Successfully added:">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Text layoutX="40.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to add a new Student?">
+      <Text layoutX="40.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want to add a new Student?">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Button fx:id="popUpAddNewStudent" layoutX="105.0" layoutY="142.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" text="Add new Student" onAction="#returnToAddStudent"/>
-      <Button fx:id="popUpClose" layoutX="291.0" layoutY="142.0" mnemonicParsing="false" onAction="#closePopUp" prefHeight="26.0" prefWidth="120.0" text="Close"  />
+      <Button fx:id="popUpAddNewStudent" layoutX="113.0" layoutY="386.0" mnemonicParsing="false" onAction="#returnToAddStudent" prefHeight="26.0" prefWidth="120.0" text="Add new Student" />
+      <Button fx:id="popUpClose" layoutX="291.0" layoutY="386.0" mnemonicParsing="false" onAction="#closePopUp" prefHeight="26.0" prefWidth="120.0" text="Close" />
+      <Text layoutX="79.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="first name:" wrappingWidth="81.5322265625" />
+      <Text layoutX="79.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="last name:" />
+      <Text layoutX="79.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email:" />
+      <Text layoutX="79.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="course of studies" />
+      <Text fx:id="firstNameConfirm" fill="#28863a" layoutX="291.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="lastNameConfirm" fill="#28863a" layoutX="291.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="emailConfirm" fill="#28863a" layoutX="291.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="courseOfStudiesConfirm" fill="#28863a" layoutX="291.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>

@@ -29,8 +29,9 @@
            <MenuItem onAction="#handleOptionSelection" text="Stuttgart Uni" />
         </items>
       </SplitMenuButton>
-      <Button fx:id="resetButton" layoutX="216.0" layoutY="377.0" mnemonicParsing="false" onAction="#resetButton" text="RESET" />
-      <Button fx:id="addButton" layoutX="66.0" layoutY="377.0" mnemonicParsing="false" onAction="#addButton" text="ADD" />
+      <Button fx:id="resetButton" layoutX="135.0" layoutY="377.0" mnemonicParsing="false" onAction="#resetButton" text="RESET" />
+      <Button fx:id="addButton" layoutX="56.0" layoutY="377.0" mnemonicParsing="false" onAction="#addButton" prefHeight="26.0" prefWidth="55.0" text="ADD" />
       <Text fx:id="errorLine" layoutX="25.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="258.9830722808838" />
+      <Button fx:id="backButton" layoutX="221.0" layoutY="377.0" mnemonicParsing="false" text="BACK" onAction="#backTotheWelcome"/>
    </children>
 </AnchorPane>

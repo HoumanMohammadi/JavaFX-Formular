@@ -11,7 +11,7 @@ public class StudentApplication extends Application {
         try {
 
         FXMLLoader fxmlLoader = new FXMLLoader(StudentApplication.class.getResource(
-                "/com/example/demojavafx/studentFormula.fxml"));
+                "/com/example/demojavafx/welcomePage.fxml"));
           Scene scene = new Scene(fxmlLoader.load());
 
             //String css = this.getClass().getResource("/com/example/demojavafx/application.css").toExternalForm();

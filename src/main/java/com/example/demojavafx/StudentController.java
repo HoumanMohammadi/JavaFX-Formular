@@ -17,7 +17,12 @@ import static com.example.demojavafx.EmailValidator.isValidEmail;
 
 public class StudentController {
 
-
+    @FXML
+    public Button resetButton;
+    @FXML
+    public Button addButton;
+    @FXML
+    public Button backButton;
     @FXML
     private CheckBox acceptBox;
     @FXML
@@ -37,11 +42,28 @@ public class StudentController {
     private Parent root;
 
     @FXML
-    public void switchToScene2(ActionEvent event) throws IOException {
+    public void switchToScene3(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("confirmPopUp.fxml")); // Jeweiliges FXML laden
         root = loader.load();
 
         ConfirmPopUpController confirmPopUpController = loader.getController(); // Jeweiligen Controller laden
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene); // Neue Szenen setzen
+        stage.show(); // ... und einblenden
+    }
+
+    @FXML
+    public void switchToScene1(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("welcomePage.fxml")); // Jeweiliges FXML laden
+        root = loader.load();
+
+        WelcomeController welcomeController = loader.getController(); // Jeweiligen Controller laden
+
+
+        //addButton.getScene().setUserData(createStudent(event));
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -82,7 +104,7 @@ public class StudentController {
            errorLine.setText("you have been added successfully to our Data bank !");
            errorLine.setFill(Color.GREEN);
            try {
-               switchToScene2(event);
+               switchToScene3(event);
            } catch (IOException e) {
                throw new RuntimeException(e);
            }
@@ -112,5 +134,14 @@ public class StudentController {
         MenuItem selectedOption = (MenuItem) event.getSource();
         String selectedText = selectedOption.getText();
         universityName.setText(selectedText); // Update the button text
+    }
+
+    @FXML
+    public void backTotheWelcome(ActionEvent event) {
+        try {
+            switchToScene1(event);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
