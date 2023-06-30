@@ -14,10 +14,25 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 import static com.example.demojavafx.EmailValidator.isValidEmail;
 
 public class StudentController {
+
+    private static StudentController instance;
+    private List<Student> students;
+
+    public List<Student> getAllStudents() {
+        return students;
+    }
+
+    public static synchronized StudentController getInstance() {
+        if (instance == null) {
+            instance = new StudentController();
+        }
+        return instance;
+    }
 
 
     @FXML
@@ -48,10 +63,13 @@ public class StudentController {
 
     @FXML
     public void switchToScene3(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("confirmPopUp.fxml")); // Jeweiliges FXML laden
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("detailView.fxml")); // Jeweiliges FXML laden
         root = loader.load();
 
-        ConfirmPopUpController confirmPopUpController = loader.getController(); // Jeweiligen Controller laden
+        DetailViewController detailViewController  = loader.getController(); // Jeweiligen Controller laden
+
+        Student studentData= new Student(firstName.getText(), lastName.getText(), universityName.getText(), email.getText(), courseOfStudies.getText());
+        detailViewController.setStudentDataInFields(studentData);
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -174,6 +192,14 @@ public class StudentController {
         String selectedStudent = listStudent.getSelectionModel().getSelectedItem();
         if (selectedStudent != null) {
             listStudent.getItems().remove(selectedStudent);
+        }
+    }
+
+    public void detailview(ActionEvent event) {
+        try {
+            switchToScene3(event);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
