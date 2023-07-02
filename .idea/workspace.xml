@@ -4,12 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccdcc717-c5d4-40fb-a58c-53368ef30395" name="Changes" comment="Student changed to String">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/DetailViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/detailView.fxml" afterDir="false" />
+    <list default="true" id="ccdcc717-c5d4-40fb-a58c-53368ef30395" name="Changes" comment="3 scene with table implemented">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentDBApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/controller/AllStudentsViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/controller/RegistrationConfirmationViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/controller/RegistrationViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/controller/UpdateViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/controller/WelcomeViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/model/StudentWithoutId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/all-students-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/registration-confirmation-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/registration-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/update-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/welcome-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/ConfirmPopUpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/DetailViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/EmailValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/StudentListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demojavafx/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/confirmPopUp.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/detailView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentFormula.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/studentList.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demojavafx/welcomePage.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +46,8 @@
       <list>
         <option value="Record" />
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -69,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687942238621</updated>
-      <workItem from="1687942239700" duration="67679000" />
+      <workItem from="1687942239700" duration="70521000" />
     </task>
     <task id="LOCAL-00001" summary="Listener added for firstname">
       <created>1688032057731</created>
@@ -120,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688132362015</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="3 scene with table implemented">
+      <created>1688165670767</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688165670767</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +166,7 @@
     <MESSAGE value="3 scene added" />
     <MESSAGE value="delete method implemented" />
     <MESSAGE value="Student changed to String" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student changed to String" />
+    <MESSAGE value="3 scene with table implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 scene with table implemented" />
   </component>
 </project>

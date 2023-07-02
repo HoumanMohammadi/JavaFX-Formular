@@ -1,0 +1,95 @@
+package com.example.demojavafx.controller;
+
+
+import com.example.demojavafx.model.Student;
+import com.example.demojavafx.model.StudentWithoutId;
+import com.example.demojavafx.service.StudentService;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class UpdateViewController {
+
+    @FXML
+    private TextField firstNameField;
+    @FXML
+    private TextField lastNameField;
+    @FXML
+    private TextField emailField;
+    @FXML
+    private TextField courseOfStudiesField;
+    @FXML
+    private Label labelErrorMessage;
+
+    private StudentService studentService = StudentService.getInstance();
+
+    public void setStudentDataInFields(Student studentToEdit) {
+        firstNameField.setText(studentToEdit.firstName());
+        lastNameField.setText(studentToEdit.lastName());
+        emailField.setText(studentToEdit.email());
+        courseOfStudiesField.setText(studentToEdit.courseOfStudies());
+    }
+
+    private boolean isEveryTextFieldValid() {
+        if (firstNameField.getText() == null || firstNameField.getText().isEmpty()) {
+            labelErrorMessage.setText("Bitte gib einen Vornamen ein");
+            return false;
+        } else if (lastNameField.getText() == null || lastNameField.getText().isEmpty()) {
+            labelErrorMessage.setText("Bitte gib einen Nachnamen ein");
+            return false;
+        } else if (emailField.getText() == null || emailField.getText().isEmpty()) {
+            labelErrorMessage.setText("Bitte gib eine E-Mail-Adresse ein");
+            return false;
+        } else if (courseOfStudiesField.getText() == null || courseOfStudiesField.getText().isEmpty()) {
+            labelErrorMessage.setText("Bitte gib einen Studiengang ein");
+            return false;
+        } else {
+            labelErrorMessage.setText("");
+            return true;
+        }
+    }
+
+    @FXML
+    public void switchToWelcomeView(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/demojavafx/welcome-view.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        stage.show();
+    }
+
+    @FXML
+    public void switchToRegistrationConfirmationView(ActionEvent event) throws IOException {
+        if (isEveryTextFieldValid()) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/demojavafx/registration-confirmation-view.fxml"));
+            Parent root = loader.load();
+
+            RegistrationConfirmationViewController registrationConfirmationViewController = loader.getController();
+
+            StudentWithoutId studentData = new StudentWithoutId(firstNameField.getText(), lastNameField.getText(), emailField.getText(), courseOfStudiesField.getText());
+            Student newStudentWithId = studentService.createNewStudent(studentData);
+
+            registrationConfirmationViewController.setSelectedStudent(newStudentWithId);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+
+            stage.show();
+        }
+    }
+}
