@@ -53,7 +53,7 @@ public class AllStudentsViewController {
 
     public void deleteSelectedStudent() throws IOException, InterruptedException {
         studentService.deleteStudent(listView.getSelectionModel().getSelectedItem().matriculationNumber());
-        listView.getItems().remove(listView.getSelectionModel().getSelectedItem());
+        listView.getItems().remove(listView.getSelectionModel().getSelectedItem());//to avoid the error by empty list
     }
 
     @FXML
