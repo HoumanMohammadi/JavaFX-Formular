@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.controller.AllStudentsViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.controller.AllStudentsViewController">
     <top>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Studentenübersicht" BorderPane.alignment="CENTER">
             <font>
@@ -28,12 +28,13 @@
                     <children>
                         <HBox alignment="CENTER" prefHeight="44.0" prefWidth="574.0" spacing="20.0">
                             <children>
-                                <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Ausgewählter Studi&gt;" textAlignment="CENTER" wrappingWidth="177.6171875">
+                                <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="114.6171875">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
                                 </Text>
-                                <Button fx:id="editStudentButton" disable="true" mnemonicParsing="false" onAction="#switchToRegistrationViewEditSelectedStudent" prefHeight="25.0" prefWidth="180.0" text="Bearbeiten" />
+                                <Button fx:id="editStudentButton" disable="true" mnemonicParsing="false" onAction="#switchToRegistrationViewEditSelectedStudent" prefHeight="26.0" prefWidth="118.0" text="Bearbeiten" />
+                        <Button fx:id="deleteStudentButton" disable="true" mnemonicParsing="false" onAction="#deleteSelectedStudent" prefHeight="26.0" prefWidth="119.0" text="Delete" />
                             </children>
                             <opaqueInsets>
                                 <Insets />

@@ -10,7 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -80,7 +79,7 @@ public class UpdateViewController {
             RegistrationConfirmationViewController registrationConfirmationViewController = loader.getController();
 
             StudentWithoutId studentData = new StudentWithoutId(firstNameField.getText(), lastNameField.getText(), emailField.getText(), courseOfStudiesField.getText());
-            Student newStudentWithId = studentService.createNewStudent(studentData);
+            Student newStudentWithId = studentService.addStudent(studentData);
 
             registrationConfirmationViewController.setSelectedStudent(newStudentWithId);
 

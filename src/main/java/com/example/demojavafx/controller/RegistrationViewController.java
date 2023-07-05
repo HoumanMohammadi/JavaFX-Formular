@@ -85,7 +85,7 @@ public class RegistrationViewController {
             RegistrationConfirmationViewController registrationConfirmationViewController = loader.getController();
 
             StudentWithoutId studentData = new StudentWithoutId(firstNameField.getText(), lastNameField.getText(), emailField.getText(), courseOfStudiesField.getText());
-            Student newStudentWithId = studentService.createNewStudent(studentData);
+            Student newStudentWithId = studentService.addStudent(studentData);
 
             registrationConfirmationViewController.setSelectedStudent(newStudentWithId);
 

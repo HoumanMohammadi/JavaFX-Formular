@@ -18,7 +18,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class AllStudentsViewController {
-
+    @FXML
+    public Button deleteStudentButton;
     @FXML
     private ListView<Student> listView;
     @FXML
@@ -38,11 +39,21 @@ public class AllStudentsViewController {
                 .selectedItemProperty()
                 // Listener der etwas macht
                 .addListener(
-                        (observableValue, s, t1) -> {
+                        (observableValue, s, t1) -> {if (listView.getSelectionModel().getSelectedItem()!= null){
                             text.setText(listView.getSelectionModel().getSelectedItem().firstName() + " " + listView.getSelectionModel().getSelectedItem().lastName());
                             editStudentButton.setDisable(false);
+                            deleteStudentButton.setDisable(false);
+
+
                         }
+                    }
                 );
+    }
+    @FXML
+
+    public void deleteSelectedStudent() throws IOException, InterruptedException {
+        studentService.deleteStudent(listView.getSelectionModel().getSelectedItem().matriculationNumber());
+        listView.getItems().remove(listView.getSelectionModel().getSelectedItem());
     }
 
     @FXML

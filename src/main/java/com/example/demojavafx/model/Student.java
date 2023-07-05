@@ -1,6 +1,6 @@
 package com.example.demojavafx.model;
 
-public record Student(String id, String firstName, String lastName, String email, String courseOfStudies) {
+public record Student(String matriculationNumber, String firstName, String lastName, String email, String courseOfStudies) {
 
     @Override
     public String toString() {
